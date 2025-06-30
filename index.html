@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Chat Buddy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="main-container">
+    <section class="greeting-section">
+      <h1>
+        Hi there, <span class="gradient-text">Buddy !!</span><br>
+        Made by <span class="gradient-text">Brilliance IT solution jalgaon</span>
+      </h1>
+      <p class="subtitle">
+        Made by one of our students !
+      </p>
+      <div class="prompt-suggestions">
+        <div class="prompt-card" data-prompt="Write a to-do list for a personal project or task">
+          <span class="icon">👤</span>
+          Write a to-do list for a personal project or task
+        </div>
+        <div class="prompt-card" data-prompt="Generate an email to reply to a job offer">
+          <span class="icon">✉️</span>
+          Generate an email to reply to a job offer
+        </div>
+        <div class="prompt-card" data-prompt="Summarise this article or text for me in one paragraph">
+          <span class="icon">💬</span>
+          Summarise this article or text for me in one paragraph
+        </div>
+        <div class="prompt-card" data-prompt="How does AI work in a technical capacity">
+          <span class="icon">🛠️</span>
+          How does AI work in a technical capacity
+        </div>
+      </div>
+      <button class="refresh-btn" id="refreshPrompts">⟳ Refresh Prompts</button>
+    </section>
+
+    <section class="chat-section">
+      <div id="chatBox" class="chat-box"></div>
+      <form id="chatForm" class="chat-input-row" autocomplete="off">
+        <textarea id="chatInput" placeholder="Ask whatever you want..." maxlength="1000" rows="2" required></textarea>
+        <div class="chat-input-actions">
+          <button type="button" class="attach-btn">📎 Add Attachment</button>
+          <button type="button" class="image-btn">🖼️ Use Image</button>
+          <span class="char-count" id="charCount">0/1000</span>
+          <button type="submit" class="send-btn" id="sendBtn">➔</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
