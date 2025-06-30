@@ -73,7 +73,7 @@ chatForm.addEventListener('submit', async (e) => {
   const loadingMsg = appendMessage("🤖 Thinking...", 'ai', true);
 
   try {
-    const res = await fetch('http://localhost:3001/api/chat', {
+    const res = await fetch('https://ai-chatbot-backend-ivsw.onrender.com', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message: userMsg })
