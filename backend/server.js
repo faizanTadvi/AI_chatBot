@@ -35,6 +35,9 @@ app.post('/api/chat', async (req, res) => {
     res.status(500).json({ reply: "❌ AI error or key issue." });
   }
 });
+app.get('/', (req, res) => {
+  res.send('🧠 AI Chatbot backend is live!');
+});
 
 const PORT = 3001;
 app.listen(PORT, () => console.log(`🚀 AI backend running at http://localhost:${PORT}`));
